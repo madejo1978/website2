@@ -1,0 +1,127 @@
+/********** Tools ***************/
+.debug {
+    border: solid 3px purple;
+}
+
+
+/********* General Layout *******/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Dosis', sans-serif;;
+	-webkit-font-smoothing: antialiased;
+    background-color: white;
+    /* background-image: url("../img/background2.jpeg");  */
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+h1,
+h2 {
+	margin: 0;
+	color: black;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 1x;
+}
+
+a 
+{
+    font-size: 24px;
+    font-weight: 200;
+	color: black;
+	line-height: 1.6;
+}
+
+
+/********* main page ***********/
+
+/*** container1 ***/
+.container1 {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.container-navigation {
+    background-color: white;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.container-navigation:hover {
+    background-color: #f74d33;
+  }
+
+.navigation-left {
+    display: flex;   
+}
+
+.navigation-left a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navigation-left a:hover {
+    color: white;
+}
+
+.navigation-right {
+    display: flex;   
+}
+
+.navigation-right a {
+    padding: 10px;   
+    text-decoration: none;
+}
+
+.navigation-right a:hover {
+    color: white;
+}
+
+ion-icon {
+    font-size: 34px;
+  }
+
+/********* main page ***********/
+
+/*** container2   ***/
+
+.container2 {
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 88.65%;
+    margin: auto auto;
+    margin-top: 50px;
+}
+
+.blog1-text {
+    display: flex;
+    width: 50%;
+}
+
+.blog1-picture {
+    display: flex;
+    width: 50%;
+}
+}
