@@ -33,12 +33,12 @@ session_start();
         <h2>Cart</h2>
     </div><!--//container2-->
 
-    <div class="container3"> 
+<!--     <div class="container3"> 
         <div class = "shoe-container-details">
             <?php include " " ;?>
         </div>
-    </div><!--//container2-->
-
+    </div>//container2-->
+ -->
 
 <div class="container3"></div>
 <div class="container4"></div>

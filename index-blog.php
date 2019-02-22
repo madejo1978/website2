@@ -33,7 +33,7 @@ session_start();
         <div class="blog1-text" id="blog1">
             <h2>How A Dutch Subculture<br>called "Gabber" embraced the NIKE Air Max 90 iD</h2>
         </div>
-        <div class="blog1-picture" >
+        <div class="blog1-picture">
             <img src="img/gabber-en-gabberin.jpg" alt="gabber-en-gabberin" >
         </div>
     </div><!--//container2-->

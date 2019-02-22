@@ -26,7 +26,7 @@ session_start();
 
             <div class="navigation-right">
                 <a href="index-login.php">Login / Register</a>
-                <a href="index-cart.php">ShoppingBagLogo</a>
+                <a href="index-cart.php"><ion-icon name="basket"></ion-icon></a>
             </div>
         </div> 
     </div><!--//container1-->
@@ -37,8 +37,10 @@ session_start();
     </div><!--//container2-->
 
 
-<div class="container3"></div>
-<div class="container4"></div>
-    
+    <div class="container3"></div>
+    <div class="container4"></div>
+
+    <!--JavaScript-->
+<script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>    
 </body>
 </html>

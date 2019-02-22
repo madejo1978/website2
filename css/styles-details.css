@@ -48,6 +48,9 @@ a
 	line-height: 1.6;
 }
 
+ion-icon {
+    font-size: 34px;
+  }
 
 /********* main page ***********/
 
@@ -70,7 +73,7 @@ a
 }
 
 .container-navigation:hover {
-    background-color: gray;
+    background-color:#f74d33;
   }
 
 .navigation-left {
