@@ -10,7 +10,7 @@
         - sql syntax for the prepared statement  
         - named placeholders in the values
         - create variable "statement" $stmt
-        - object orientated approach: use database-handler with function prepare(), parameter is the sql-syntax 
+        -   : use database-handler with function prepare(), parameter is the sql-syntax 
         - use function bindParam() to bind the prepared statement       
         - function bindParam(): first argument is placeholder, second argument is the variable data when you execute the prepared statement 
         - function execute()
