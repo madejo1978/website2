@@ -34,9 +34,13 @@ session_start();
         <form action="php/loginFormExisting.php" method="POST">
             <h2>PLEASE LOGIN</h2>
             <legend><br>WELCOME<br>&nbsp<br></legend>
+            <?php 
+                if(isset($_SESSION["loginwrong"])) {
+                    echo 'Your Username or Password is unknown';}
+                    echo $_SESSION["loginwrong"];
+            ?> 
             <input type="text" id="#" name="user_email" autofocus placeholder="Username">
             <input type="password" id="#" name="user_password" autofocus placeholder="Password">
-            <br>
             <br>
             <button type="submit">Submit</button>
         </form>

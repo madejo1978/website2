@@ -5,21 +5,23 @@
     $email = $_POST['user_email'];
     $user_password = $_POST['user_password'];
     $database_query = "SELECT user_email 
-               FROM users 
-               WHERE user_email = '$email' 
-               AND user_password = '$user_password'";
+               FROM     users 
+               WHERE    user_email = '$email' 
+               AND      user_password = '$user_password'";
 
     $db_result = $db_connection->query($database_query);
 
     if ($db_result->rowCount() != 0){
         foreach($db_result as $row){
-           $firstname = $row['user_email'];
+           $email = $row['user_email'];
     }   
 
-    $_SESSION["login-user"] = $firstname;
+    $_SESSION["login-user"] = $email;
     $_SESSION["login-wrong-message"] = "Your Username or Password is unknown";
 
-    header("location: ../index.php");
+    echo "welkom " . $email;
+
+    // header("location: ../index.php");
     }
     else 
     { 
@@ -29,9 +31,11 @@
             unset($_SESSION["login-wrong-message"]);
         }
 
-      echo 'Your Username or Password is unknown';
+        echo 'Your Username or Password is unknown';
+        echo $email;
+        $_SESSION["loginwrong"] = $email;
+        echo $_SESSION["loginwrong"] = $email;
 
-    // echo "welkom " . $firstname;
     // header verwijst naar hij moet inloggen
 }
 ?>

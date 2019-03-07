@@ -24,7 +24,6 @@ session_start();
 
             <div class="navigation-right">
                 <a href="index-login.php">Login / Register</a>
-                <a href="index-cart.php">ShoppingBagLogo</a>
             </div>
         </div> 
     </div><!--//container1-->

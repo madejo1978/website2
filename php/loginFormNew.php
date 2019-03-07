@@ -5,14 +5,33 @@
      
     include "db_connection.php";
     
+    #prepared statements
+    /* 
+        - sql syntax for the prepared statement  
+        - named placeholders in the values
+        - create variable "statement" $stmt
+        - object orientated approach: use database-handler with function prepare(), parameter is the sql-syntax 
+        - use function bindParam() to bind the prepared statement       
+        - function bindParam(): first argument is placeholder, second argument is the variable data when you execute the prepared statement 
+        - function execute()
+
+        # re-usable
+            - you only have to change the variable data
+    */
+
     try {  
         $sql = "INSERT INTO users (user_email, user_password)
-        VALUES ('$email', '$user_password')";
+        VALUES (:email, :user_password)";                // named placeholders
+        $stmt = $db_connection->prepare($sql);               // create variable & run function prepare()
+                                                             // $db_connection->exec($sql);
+        $stmt->bindParam(':email', $email);             // function bindParam():1 placeholder / 2 variabel-data
+        $stmt->bindParam(':user_password', $user_password);  // function bindParam():1 placeholder / 2 data in variabels
+        $stmt->execute();                                    // function execute()
         
-        $db_connection->exec($sql);
-        
-        echo "Uw nieuwe account is aangemaakt <br/>";
-        echo "Welkom " . $email;
+
+
+        echo "Your new account has been created <br/>";
+        echo "Welcome " . $email;
         }
 
             catch(PDOException $e)
@@ -22,6 +41,6 @@
         
         $conn = null;
 
-header("Location: ../index-login.php");  
+// header("Location: ../index-login.php");  
 
 ?>
